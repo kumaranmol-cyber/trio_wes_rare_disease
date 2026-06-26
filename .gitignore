@@ -1,2 +1,38 @@
+# Raw sequencing data
+data/raw/
+
+# Reference genome
+data/reference/
+
+# Processed files
+data/processed/
+
+# BAM files
 *.bam
+*.bai
+
+# SAM files
+*.sam
+
+# FASTQ files
+*.fastq
 *.fastq.gz
+
+# VCF index files
+*.tbi
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Conda
+.conda/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
