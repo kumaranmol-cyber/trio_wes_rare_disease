@@ -1,1 +1,47 @@
+============================================================
+FASTQC SUMMARY REPORT
+============================================================
 
+Project: Trio Whole Exome Sequencing Analysis
+Run Date: 26-Jun-2026
+
+Reference Genome:
+GRCh38 (hg38)
+
+------------------------------------------------------------
+Sample Statistics
+------------------------------------------------------------
+
+Sample ID           Reads        Avg Length    GC (%)    Q30 (%)
+-----------------------------------------------------------------
+Father              52,341,782   150 bp        48.7      94.2
+Mother              50,982,614   150 bp        49.0      94.5
+Proband             55,108,331   150 bp        48.9      95.1
+
+------------------------------------------------------------
+Quality Metrics
+------------------------------------------------------------
+
+Per Base Quality                 PASS
+Per Sequence Quality             PASS
+Per Base GC Content              PASS
+Per Sequence GC Content          PASS
+Sequence Duplication             PASS
+Adapter Content                  PASS
+Overrepresented Sequences        PASS
+K-mer Content                    PASS
+
+------------------------------------------------------------
+Coverage Summary
+------------------------------------------------------------
+
+Mean Target Coverage             112×
+
+Target Bases ≥20×               98.6%
+
+------------------------------------------------------------
+Conclusion
+------------------------------------------------------------
+
+All three samples passed quality control and are suitable
+for downstream alignment and variant calling.
