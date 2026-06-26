@@ -1,1 +1,6 @@
-
+Chromosome	Position	Reference	Alternate	Gene	Transcript	Variant_Type	Zygosity	Effect	ClinVar	gnomAD_AF	CADD_PHRED	OMIM_Association	HPO_Terms	Priority
+chr2	166894321	G	A	SCN2A	NM_001040143	Missense	Het	p.Arg853His	Pathogenic	0.00001	32.5	Epileptic encephalopathy	Seizures;Developmental delay	High
+chr7	117199644	C	T	CFTR	NM_000492	Missense	Het	p.Arg117His	Likely_pathogenic	0.00020	24.7	Cystic Fibrosis	Respiratory infections	Medium
+chr17	43045789	C	T	TP53	NM_000546	Missense	Het	p.Arg248Gln	Pathogenic	0.00000	35.0	Li-Fraumeni syndrome	Cancer predisposition	Medium
+chr16	8928471	G	C	TSC2	NM_000548	Missense	Het	p.Arg905Pro	Uncertain	0.00003	27.1	Tuberous sclerosis	Seizures;Autism	Medium
+chr11	108236547	G	A	ATM	NM_000051	Nonsense	Het	p.Trp266Ter	Likely_pathogenic	0.00001	39.4	Ataxia-telangiectasia	Immunodeficiency	Low
