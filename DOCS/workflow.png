@@ -1,1 +1,21 @@
-
+FASTQ
+   ↓
+FastQC
+   ↓
+Trimmomatic
+   ↓
+BWA-MEM
+   ↓
+SAMtools
+   ↓
+GATK HaplotypeCaller
+   ↓
+Joint Genotyping
+   ↓
+De Novo Filtering
+   ↓
+ANNOVAR Annotation
+   ↓
+OMIM + HPO Prioritization
+   ↓
+Diagnostic Report
