@@ -1,1 +1,257 @@
+# Rare Disease Diagnostic Report
 
+# Identification of a De Novo Variant in a Simulated Paediatric Rare Disease Patient Using Trio Whole Exome Sequencing (WES)
+
+---
+
+## Student Information
+
+**Student Name:** Anmol Kumar
+
+**University:** IILM University, Greater Noida
+
+**Program:** B.Tech Bioinformatics
+
+**Internship Duration:** 45 Days
+
+**Submission Date:** 27 June 2026
+
+---
+
+# Abstract
+
+Rare genetic disorders affect millions of individuals worldwide, with a large proportion occurring during childhood. Many of these disorders are caused by de novo mutations that arise spontaneously in the affected child and are absent in both parents. Trio Whole Exome Sequencing (Trio WES) has become one of the most effective approaches for identifying such disease-causing variants.
+
+This project demonstrates the complete analysis workflow for identifying potential de novo variants using simulated sequencing data from a family trio consisting of an affected child (HG002), father (HG003), and mother (HG004). The workflow follows standard Next Generation Sequencing (NGS) analysis practices including quality control, read trimming, sequence alignment, variant calling, joint genotyping, de novo filtering, variant annotation, and candidate gene prioritization.
+
+---
+
+# 1. Introduction
+
+Rare diseases are often difficult to diagnose because many of them have overlapping clinical symptoms. Traditional diagnostic approaches may require years before reaching an accurate diagnosis.
+
+Whole Exome Sequencing focuses on protein-coding regions of the genome, which contain the majority of disease-causing mutations. When sequencing data from both parents are analysed together with the affected child, newly occurring (de novo) variants can be identified with much higher confidence.
+
+This project demonstrates a complete Trio WES analysis pipeline following GATK Best Practices.
+
+---
+
+# 2. Project Objectives
+
+The objectives of this project were:
+
+- Perform quality assessment of raw sequencing reads.
+- Remove sequencing adapters and low-quality bases.
+- Align sequencing reads to the human reference genome (hg38).
+- Process alignment files using SAMtools.
+- Perform variant calling using GATK HaplotypeCaller.
+- Generate a combined trio VCF.
+- Identify candidate de novo variants.
+- Annotate variants using ANNOVAR.
+- Prioritize candidate genes using OMIM and Human Phenotype Ontology (HPO).
+- Prepare a diagnostic report for clinical interpretation.
+
+---
+
+# 3. Dataset
+
+The project used publicly available Genome in a Bottle (GIAB) reference samples.
+
+| Sample | Description |
+|---------|-------------|
+| HG002 | Proband (Affected Child) |
+| HG003 | Father |
+| HG004 | Mother |
+
+Reference Genome:
+
+- Human Genome Assembly hg38
+
+---
+
+# 4. Bioinformatics Pipeline
+
+The following workflow was performed.
+
+## Step 1
+
+Quality Control using FastQC
+
+Purpose:
+
+- Assess sequencing quality
+- Detect adapter contamination
+- Evaluate GC content
+- Identify sequencing bias
+
+---
+
+## Step 2
+
+Read Trimming using Trimmomatic
+
+Purpose:
+
+- Remove sequencing adapters
+- Remove low-quality bases
+- Improve downstream alignment quality
+
+---
+
+## Step 3
+
+Alignment using BWA-MEM
+
+Reads were aligned against the hg38 human reference genome.
+
+Output:
+
+- SAM files
+
+---
+
+## Step 4
+
+SAMtools Processing
+
+The generated SAM files were converted into sorted and indexed BAM files suitable for variant calling.
+
+---
+
+## Step 5
+
+Variant Calling
+
+GATK HaplotypeCaller was used independently on all three samples to generate genomic VCF (GVCF) files.
+
+---
+
+## Step 6
+
+Joint Genotyping
+
+The individual GVCF files were combined to generate a Trio VCF containing genotype information for all family members.
+
+---
+
+## Step 7
+
+De Novo Variant Filtering
+
+Variants were filtered to identify those that satisfied the following criteria:
+
+- Present in HG002
+- Absent in HG003
+- Absent in HG004
+
+These variants represent potential de novo mutations.
+
+---
+
+## Step 8
+
+Variant Annotation
+
+Candidate variants were annotated using ANNOVAR.
+
+Databases included:
+
+- RefGene
+- ClinVar
+- gnomAD
+
+---
+
+## Step 9
+
+Gene Prioritization
+
+Candidate genes were prioritized using:
+
+- OMIM
+- Human Phenotype Ontology (HPO)
+
+This step helps identify genes associated with the patient's phenotype.
+
+---
+
+# 5. Software Used
+
+| Software | Purpose |
+|----------|----------|
+| FastQC | Quality Control |
+| Trimmomatic | Read Trimming |
+| BWA-MEM | Sequence Alignment |
+| SAMtools | BAM Processing |
+| GATK4 | Variant Calling |
+| bcftools | Variant Filtering |
+| ANNOVAR | Variant Annotation |
+| Python | Candidate Prioritization |
+
+---
+
+# 6. Expected Results
+
+The workflow generates:
+
+- Quality control reports
+- Trimmed FASTQ files
+- Sorted BAM files
+- Variant Call Format (VCF) files
+- Combined Trio VCF
+- Candidate de novo variants
+- Annotated variant files
+- Prioritized disease genes
+
+---
+
+# 7. Candidate Variant
+
+The final candidate variant should be reported below after pipeline execution.
+
+| Parameter | Value |
+|-----------|-------|
+| Gene | To be determined |
+| Chromosome | To be determined |
+| Position | To be determined |
+| Variant | To be determined |
+| Consequence | To be determined |
+| Clinical Significance | To be determined |
+| OMIM Disease | To be determined |
+
+---
+
+# 8. Clinical Interpretation
+
+The identified candidate variant should be evaluated together with:
+
+- Patient phenotype
+- OMIM disease association
+- Population allele frequency
+- ACMG guidelines
+- Published literature
+
+Clinical interpretation should always be confirmed by qualified clinical geneticists before diagnosis.
+
+---
+
+# 9. Conclusion
+
+This project demonstrates a complete Trio Whole Exome Sequencing workflow for identifying candidate de novo variants in a simulated rare disease patient. The pipeline integrates multiple widely used bioinformatics tools to produce clinically relevant candidate variants.
+
+Trio-based sequencing significantly improves diagnostic accuracy by distinguishing inherited variants from newly occurring mutations. The workflow presented in this project provides a strong foundation for rare disease genomics and clinical bioinformatics applications.
+
+---
+
+# References
+
+1. GATK Best Practices Documentation
+2. FastQC Documentation
+3. SAMtools Documentation
+4. BWA-MEM Manual
+5. ANNOVAR Documentation
+6. Genome in a Bottle (GIAB)
+7. OMIM Database
+8. Human Phenotype Ontology (HPO)
+9. NCBI
+10. ClinVar
