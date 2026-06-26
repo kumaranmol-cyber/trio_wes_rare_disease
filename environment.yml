@@ -1,1 +1,46 @@
 name: trio_wes
+
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+
+  # Quality Control
+  - fastqc
+
+  # Read Trimming
+  - trimmomatic
+
+  # Alignment
+  - bwa
+
+  # BAM Processing
+  - samtools
+
+  # Variant Calling
+  - gatk4
+
+  # Variant Manipulation
+  - bcftools
+
+  # Variant Annotation
+  - bedtools
+  - vcftools
+
+  # Python Libraries
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - biopython
+  - pip
+
+  - pip:
+      - requests
+      - gseapy
+      - pysam
+      - pyvcf3
