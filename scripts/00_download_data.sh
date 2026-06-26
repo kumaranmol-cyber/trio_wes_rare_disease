@@ -2,32 +2,21 @@
 
 # ==========================================================
 # Trio WES Rare Disease Pipeline
-# Step 00 - Download Example Dataset
+# Step 00 - Download GIAB Trio Dataset
 # Author: Anmol Kumar
 # ==========================================================
 
-echo "=============================================="
-echo "Downloading Example Trio WES Dataset"
-echo "=============================================="
+echo "Downloading GIAB Ashkenazim Trio Dataset..."
 
-# Create directory if it does not exist
 mkdir -p ../data/raw
-
 cd ../data/raw
 
-echo "Downloading example FASTQ files..."
+echo "Please download the required FASTQ files from:"
+echo "https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/"
 
-# Replace these URLs with actual sequencing data when available.
-wget https://example.com/father_R1.fastq.gz
-wget https://example.com/father_R2.fastq.gz
+echo "After downloading, organize them as:"
+echo "data/raw/HG002/"
+echo "data/raw/HG003/"
+echo "data/raw/HG004/"
 
-wget https://example.com/mother_R1.fastq.gz
-wget https://example.com/mother_R2.fastq.gz
-
-wget https://example.com/child_R1.fastq.gz
-wget https://example.com/child_R2.fastq.gz
-
-echo "Download completed."
-
-echo "Raw FASTQ files are stored in:"
-pwd
+echo "Download step completed."
